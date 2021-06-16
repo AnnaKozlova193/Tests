@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1500
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForOski", "TestForOski\TestForOski.csproj", "{F4B22BBA-ABDF-4055-9322-34CB77F9AAF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4B22BBA-ABDF-4055-9322-34CB77F9AAF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B22BBA-ABDF-4055-9322-34CB77F9AAF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B22BBA-ABDF-4055-9322-34CB77F9AAF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B22BBA-ABDF-4055-9322-34CB77F9AAF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D3FC669-E44D-49D7-A583-A968E5CE2123}
+	EndGlobalSection
+EndGlobal

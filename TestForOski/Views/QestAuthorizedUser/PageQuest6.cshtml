@@ -1,0 +1,41 @@
+﻿@model TestForOski.Models.CheckBoxModel
+<h2>Тест по Биологии </h2>
+
+@{
+    List<string> quest = new List<string>();
+    foreach (var q in ViewBag.Questions)
+    {
+        if (q.IdCategory == 2)
+        {
+            // Собрали вопросы из конкретной категории
+            quest.Add(q.Text);
+
+        }
+    }
+}
+<h2 style="color:maroon">Третий вопрос :</h2>
+
+@for (int i = 0; i < quest.Count; i++)
+{
+    if (i == 2)
+    {
+        <h3>@quest[2]</h3>
+    }
+
+}
+@using (Html.BeginForm("PageQuest6", "QestAuthorizedUser"))
+{
+    @Html.CheckBox("answer1", false) @Html.Label(" Лиса ")
+    <br />
+    @Html.CheckBoxFor(m => m.Status, false) @Html.Label(" Жираф ")
+    <br />
+    @Html.CheckBox("answer3", false) @Html.Label(" Комар ")
+    <br />
+    <input type="submit" value="Сохранить" />
+
+}
+<br />
+<br />
+<a class=" btn btn-default" href="~/Home/TestForAuthorizeUsers">Вернуться к тестам</a>
+@*показать результат теста или при продолжении, + к другим баллам ??? *@
+<h3>@ViewBag.Status</h3>

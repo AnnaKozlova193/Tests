@@ -1,0 +1,42 @@
+﻿@model TestForOski.Models.CheckBoxModel
+<h2>Тест по Биологии </h2>
+
+@{
+    List<string> quest = new List<string>();
+    foreach (var q in ViewBag.Questions)
+    {
+        if (q.IdCategory == 2)
+        {
+            // Собрали вопросы из конкретной категории
+            quest.Add(q.Text);
+
+        }
+    }
+}
+<h2 style="color:maroon">Второй вопрос :</h2>
+
+@for (int i = 0; i < quest.Count; i++)
+{
+    if (i == 1)
+    {
+        <h3>@quest[1]</h3>
+    }
+
+}
+
+@using (Html.BeginForm("PageQuest5", "QestAuthorizedUser"))
+{
+    @Html.CheckBoxFor(m => m.Status, false) @Html.Label(" Беркут ")
+    <br />
+    @Html.CheckBox("answer2", false) @Html.Label(" Оса ")
+    <br />
+    @Html.CheckBox("answer3", false) @Html.Label(" Павлин ")
+    <br />
+    <input type="submit" value="Сохранить" />
+
+}
+<br />
+<br />
+<a class=" btn btn-default" href="~/QestAuthorizedUser/PageQuest6">Продолжить</a>
+<h3>@ViewBag.Status</h3>
+
